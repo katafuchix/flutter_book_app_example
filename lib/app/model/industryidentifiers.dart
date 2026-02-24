@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'industryIdentifiers.freezed.dart';
-part 'industryIdentifiers.g.dart';
+part 'industryidentifiers.freezed.dart';
+part 'industryidentifiers.g.dart';
 
 @freezed
 class IndustryIdentifiers with _$IndustryIdentifiers {
