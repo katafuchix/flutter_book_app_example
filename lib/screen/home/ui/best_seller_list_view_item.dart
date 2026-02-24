@@ -1,4 +1,3 @@
-import 'package:booklyapp/feature/home/presentation/view/Widgets/CustomListViewItem.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +8,7 @@ import '../../../core/util/style.dart';
 
 import '../../../app/model/book.dart';
 import 'book_rating.dart';
+import 'custom_list_view_item.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key, required this.book});
@@ -18,13 +18,13 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push("/BookDetails", extra: bookModel),
+      //onTap: () => GoRouter.of(context).push("/BookDetails", extra: book),
       child: SizedBox(
         height: 120,
         child: Row(
           children: [
             Customlistviewitem(
-              imagUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
+              imagUrl: book.volumeInfo?.imageLinks?.thumbnail ?? '',
             ),
             const SizedBox(width: 30),
             Expanded(
@@ -34,7 +34,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      bookModel.volumeInfo.title!,
+                      book.volumeInfo?.title ?? '',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle20

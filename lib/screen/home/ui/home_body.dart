@@ -3,10 +3,10 @@ import '../../../Constant.dart';
 import '../../../core/util/assets_data.dart';
 import '../../../core/util/style.dart';
 
-import 'FeaturedListView.dart';
 import 'best_seller_list_view.dart';
 import 'best_seller_list_view_item.dart';
 import 'custom_appbar.dart';
+import 'featured_book_list_view.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
