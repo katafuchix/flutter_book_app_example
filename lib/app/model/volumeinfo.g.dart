@@ -6,37 +6,40 @@ part of 'volumeinfo.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_VolumeInfo _$VolumeInfoFromJson(Map<String, dynamic> json) => _VolumeInfo(
-  json['title'] as String?,
-  (json['authors'] as List<dynamic>?)?.map((e) => e as String).toList(),
-  json['publishedDate'] as String?,
-  (json['industryIdentifiers'] as List<dynamic>?)
-      ?.map((e) => IndustryIdentifiers.fromJson(e as Map<String, dynamic>))
-      .toList(),
-  json['readingModes'] == null
-      ? null
-      : ReadingModes.fromJson(json['readingModes'] as Map<String, dynamic>),
-  (json['pageCount'] as num?)?.toInt(),
-  json['printType'] as String?,
-  (json['categories'] as List<dynamic>?)?.map((e) => e as String).toList(),
-  json['maturityRating'] as String?,
-  json['allowAnonLogging'] as bool?,
-  json['contentVersion'] as String?,
-  json['panelizationSummary'] == null
-      ? null
-      : PanelizationSummary.fromJson(
-          json['panelizationSummary'] as Map<String, dynamic>,
-        ),
-  json['imageLinks'] == null
-      ? null
-      : ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
-  json['language'] as String?,
-  json['previewLink'] as String?,
-  json['infoLink'] as String?,
-  json['canonicalVolumeLink'] as String?,
-);
+_$VolumeInfoImpl _$$VolumeInfoImplFromJson(Map<String, dynamic> json) =>
+    _$VolumeInfoImpl(
+      title: json['title'] as String?,
+      authors:
+          (json['authors'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      publishedDate: json['publishedDate'] as String?,
+      industryIdentifiers: (json['industryIdentifiers'] as List<dynamic>?)
+          ?.map((e) => IndustryIdentifiers.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      readingModes: json['readingModes'] == null
+          ? null
+          : ReadingModes.fromJson(json['readingModes'] as Map<String, dynamic>),
+      pageCount: (json['pageCount'] as num?)?.toInt(),
+      printType: json['printType'] as String?,
+      categories: (json['categories'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      maturityRating: json['maturityRating'] as String?,
+      allowAnonLogging: json['allowAnonLogging'] as bool?,
+      contentVersion: json['contentVersion'] as String?,
+      panelizationSummary: json['panelizationSummary'] == null
+          ? null
+          : PanelizationSummary.fromJson(
+              json['panelizationSummary'] as Map<String, dynamic>),
+      imageLinks: json['imageLinks'] == null
+          ? null
+          : ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+      language: json['language'] as String?,
+      previewLink: json['previewLink'] as String?,
+      infoLink: json['infoLink'] as String?,
+      canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+    );
 
-Map<String, dynamic> _$VolumeInfoToJson(_VolumeInfo instance) =>
+Map<String, dynamic> _$$VolumeInfoImplToJson(_$VolumeInfoImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'authors': instance.authors,

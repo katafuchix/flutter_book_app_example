@@ -6,8 +6,14 @@ part of 'readingmodes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ReadingModes _$ReadingModesFromJson(Map<String, dynamic> json) =>
-    _ReadingModes(json['text'] as bool?, json['image'] as bool?);
+_$ReadingModesImpl _$$ReadingModesImplFromJson(Map<String, dynamic> json) =>
+    _$ReadingModesImpl(
+      text: json['text'] as bool?,
+      image: json['image'] as bool?,
+    );
 
-Map<String, dynamic> _$ReadingModesToJson(_ReadingModes instance) =>
-    <String, dynamic>{'text': instance.text, 'image': instance.image};
+Map<String, dynamic> _$$ReadingModesImplToJson(_$ReadingModesImpl instance) =>
+    <String, dynamic>{
+      'text': instance.text,
+      'image': instance.image,
+    };

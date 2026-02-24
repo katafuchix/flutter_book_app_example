@@ -6,8 +6,12 @@ part of 'searchinfo.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SearchInfo _$SearchInfoFromJson(Map<String, dynamic> json) =>
-    _SearchInfo(json['textSnippet'] as String?);
+_$SearchInfoImpl _$$SearchInfoImplFromJson(Map<String, dynamic> json) =>
+    _$SearchInfoImpl(
+      textSnippet: json['textSnippet'] as String?,
+    );
 
-Map<String, dynamic> _$SearchInfoToJson(_SearchInfo instance) =>
-    <String, dynamic>{'textSnippet': instance.textSnippet};
+Map<String, dynamic> _$$SearchInfoImplToJson(_$SearchInfoImpl instance) =>
+    <String, dynamic>{
+      'textSnippet': instance.textSnippet,
+    };

@@ -9,7 +9,7 @@ part 'accessinfo.g.dart';
 
 @freezed
 class AccessInfo with _$AccessInfo {
-  const factory AccessInfo(
+  const factory AccessInfo({
     String? country,
     String? viewability,
     bool? embeddable,
@@ -20,7 +20,7 @@ class AccessInfo with _$AccessInfo {
     String? webReaderLink,
     String? accessViewStatus,
     bool? quoteSharingAllowed,
-  ) = _AccessInfo;
+  }) = _AccessInfo;
 
   factory AccessInfo.fromJson(Map<String, dynamic> json) =>
       _$AccessInfoFromJson(json);

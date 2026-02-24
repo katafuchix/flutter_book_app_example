@@ -6,10 +6,10 @@ part 'panelizationsummary.g.dart';
 
 @freezed
 class PanelizationSummary with _$PanelizationSummary {
-  const factory PanelizationSummary(
+  const factory PanelizationSummary({
     bool? containsEpubBubbles,
     bool? containsImageBubbles,
-  ) = _PanelizationSummary;
+  }) = _PanelizationSummary;
 
   factory PanelizationSummary.fromJson(Map<String, dynamic> json) =>
       _$PanelizationSummaryFromJson(json);

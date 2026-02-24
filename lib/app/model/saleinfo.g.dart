@@ -6,16 +6,18 @@ part of 'saleinfo.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SaleInfo _$SaleInfoFromJson(Map<String, dynamic> json) => _SaleInfo(
-  json['country'] as String?,
-  json['saleability'] as String?,
-  json['isEbook'] as bool?,
-  json['buyLink'] as String?,
-);
+_$SaleInfoImpl _$$SaleInfoImplFromJson(Map<String, dynamic> json) =>
+    _$SaleInfoImpl(
+      country: json['country'] as String?,
+      saleability: json['saleability'] as String?,
+      isEbook: json['isEbook'] as bool?,
+      buyLink: json['buyLink'] as String?,
+    );
 
-Map<String, dynamic> _$SaleInfoToJson(_SaleInfo instance) => <String, dynamic>{
-  'country': instance.country,
-  'saleability': instance.saleability,
-  'isEbook': instance.isEbook,
-  'buyLink': instance.buyLink,
-};
+Map<String, dynamic> _$$SaleInfoImplToJson(_$SaleInfoImpl instance) =>
+    <String, dynamic>{
+      'country': instance.country,
+      'saleability': instance.saleability,
+      'isEbook': instance.isEbook,
+      'buyLink': instance.buyLink,
+    };

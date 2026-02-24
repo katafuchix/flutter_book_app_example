@@ -6,7 +6,7 @@ part 'epub.g.dart';
 
 @freezed
 class Epub with _$Epub {
-  const factory Epub(bool? isAvailable, String? downloadLink) = _Epub;
+  const factory Epub({bool? isAvailable, String? downloadLink}) = _Epub;
 
   factory Epub.fromJson(Map<String, dynamic> json) => _$EpubFromJson(json);
 }
