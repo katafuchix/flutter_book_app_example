@@ -1,12 +1,13 @@
 import 'package:go_router/go_router.dart';
 import '../../screen/splash/splash_screen.dart';
+import '../../screen/home/home_screen.dart';
 
 abstract class Routers {
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => SplashScreen()),
+      GoRoute(path: '/HomeScreen', builder: (context, state) => HomeScreen()),
       /*
-      GoRoute(path: '/HomeScreen', builder: (context, state) => HomeView()),
       // GoRoute(path: '/BookDetails', builder: (context, state) => BookDetailsView()),
       GoRoute(
         path: '/BookDetails',

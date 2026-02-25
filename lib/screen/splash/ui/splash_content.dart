@@ -14,6 +14,7 @@ class SplashContentState extends State<SplashContent>
     with SingleTickerProviderStateMixin {
   late AnimationController? animationController;
   late Animation<Offset> slidingAnimation;
+
   @override
   void initState() {
     super.initState();
@@ -23,7 +24,7 @@ class SplashContentState extends State<SplashContent>
 
   void GotoHomePage() {
     Future.delayed(const Duration(seconds: 3), () {
-      //GoRouter.of(context).pushReplacement('/HomeScreen');
+      GoRouter.of(context).pushReplacement('/HomeScreen');
     });
   }
 
